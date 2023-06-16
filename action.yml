@@ -12,9 +12,10 @@ runs:
       uses: actions/checkout@v3
       with:
         repository: 'marcinguy/betterscan-vanta'
+        path: code
     - name: Install Dependencies
-      run: pip install -r requirements.txt
+      run: pip install -r code/requirements.txt
       shell: bash
     - name: Run
-      run: python client.py
+      run: python code/client.py
       shell: bash
